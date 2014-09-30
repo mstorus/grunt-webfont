@@ -39,7 +39,8 @@ module.exports = function(o, allDone) {
 				normalize: o.normalize,
 				log: logger.verbose.bind(logger),
 				error: logger.error.bind(logger),
-				round: o.round
+				round: o.round,
+				horizontalTranslation: o.horizontalTranslation
 			});
 			stream.on('data', function(chunk) {
 				font += decoder.write(chunk);
