@@ -35,6 +35,7 @@ module.exports = function(o, allDone) {
 				fontName: o.fontName,
 				fontHeight: o.fontHeight,
 				descent: o.descent,
+				ascent: o.ascent,
 				normalize: o.normalize,
 				log: logger.verbose.bind(logger),
 				error: logger.error.bind(logger)
