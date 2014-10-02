@@ -93,6 +93,7 @@ module.exports = function(grunt) {
 			ascent: options.ascent || 448,
 			callback: options.callback
 			horizontalTranslation: options.horizontalTranslation || 0
+			customWidth: options.customWidth || false
 		};
 
 		o = _.extend(o, {
