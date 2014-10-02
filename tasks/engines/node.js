@@ -40,7 +40,8 @@ module.exports = function(o, allDone) {
 				log: logger.verbose.bind(logger),
 				error: logger.error.bind(logger),
 				round: o.round,
-				horizontalTranslation: o.horizontalTranslation
+				horizontalTranslation: o.horizontalTranslation,
+				customWidth: o.customWidth
 			});
 			stream.on('data', function(chunk) {
 				font += decoder.write(chunk);
