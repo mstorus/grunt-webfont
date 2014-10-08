@@ -145,14 +145,17 @@ module.exports = function(o, allDone) {
 
 		// Run ttfautohint
 		var args = [
-			'ttfautohint',
 			'--symbol',
 			'--fallback-script=latn',
-			'--windows-compatibility',
-			'--no-info',
-			originalFilepath,
-			hintedFilepath
+			'--no-info'
 		];
+
+		if (o.autoHint.windowsCompatibility !== false) {
+		    args.push('--windows-compatibility');
+		}
+
+		args.unshift('ttfautohint');
+		args.push(originalFilepath, hintedFilepath);
 
 		exec(args, function(err, out, code) {
 			if (err) {
