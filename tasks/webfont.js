@@ -91,9 +91,10 @@ module.exports = function(grunt) {
 			fontHeight: options.fontHeight || 512,
 			descent: options.descent || 64,
 			ascent: options.ascent || 448,
-			callback: options.callback
-			horizontalTranslation: options.horizontalTranslation || 0
-			customWidth: options.customWidth || false
+			callback: options.callback,
+			horizontalTranslation: options.horizontalTranslation || 0,
+			customWidth: options.customWidth || false,
+			usWinAscent: options.usWinAscent
 		};
 
 		o = _.extend(o, {
